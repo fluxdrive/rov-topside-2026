@@ -1,11 +1,37 @@
+<<<<<<< HEAD
+# All services share one image (built once) — ROS 2 Lyrical
+x-rov: &rov
+  image: rov-topside:lyrical
+  build: .
+  network_mode: host
+  restart: unless-stopped
+
+services:
+  joy_publisher:
+    <<: *rov
+=======
 services:
   joy_publisher:
     build: .
     network_mode: host
+>>>>>>> 613bc57504edb5b445fd2492fa1709f1f692d8f9
     privileged: true  # for /dev/input access
     volumes:
       - /dev/input:/dev/input:ro
     command: ros2 run rov_joystick joy_publisher
+<<<<<<< HEAD
+
+  web_dashboard:
+    <<: *rov
+    command: ros2 run rov_dashboard server
+    # Dashboard served on http://localhost:8080, WebSocket on ws://localhost:9090
+
+  photogrammetry_saver:
+    <<: *rov
+    volumes:
+      - ./captures:/rov_captures
+    command: ros2 run rov_photogrammetry saver --ros-args -p save_dir:=/rov_captures
+=======
     restart: unless-stopped
 
   web_dashboard:
@@ -22,3 +48,4 @@ services:
       - ./captures:/rov_captures
     command: ros2 run rov_photogrammetry saver --ros-args -p save_dir:=/rov_captures
     restart: unless-stopped
+>>>>>>> 613bc57504edb5b445fd2492fa1709f1f692d8f9

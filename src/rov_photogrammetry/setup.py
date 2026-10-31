@@ -17,7 +17,11 @@ setup(
     maintainer_email='mahkgamer@gmail.com',
     description='Topside photogrammetry image saver',
     license='MIT',
+<<<<<<< HEAD
+    extras_require={'test': ['pytest']},
+=======
     tests_require=['pytest'],
+>>>>>>> 613bc57504edb5b445fd2492fa1709f1f692d8f9
     entry_points={
         'console_scripts': [
             'saver = rov_photogrammetry.saver:main',

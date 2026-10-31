@@ -4,10 +4,19 @@
 
 This is an underwater ROV system built for photogrammetry and manual piloting. It consists of two computers communicating over a local network:
 
+<<<<<<< HEAD
+- **Onboard (Raspberry Pi 5, Raspberry Pi OS Lite 64-bit)**: `hydromeda@192.168.1.70` — runs flight control and camera interfaces
+- **Topside (x86_64 laptop, AlmaLinux 10, ROS 2 Lyrical via RoboStack/pixi)**: `ahmad@192.168.1.69` — runs joystick driver, web dashboard, and image saving
+
+Both sides communicate via ROS 2 Lyrical Luth over CycloneDDS with unicast peer discovery (no multicast, required for Docker host networking).
+
+Neither machine runs Ubuntu. The topside runs AlmaLinux 10 with ROS 2 Lyrical from RoboStack, managed by pixi (`pixi.toml`, set up by `host-setup/setup-almalinux.sh`); `./start.sh` runs inside that environment automatically. The onboard Pi uses Docker with the official `ros:lyrical` images (OS still being decided: AlmaLinux or Raspberry Pi OS Lite). One-time host setup scripts live in `host-setup/` in each repo.
+=======
 - **Onboard (Raspberry Pi 5)**: `hydromeda@192.168.1.70` — runs flight control and camera interfaces
 - **Topside (Ubuntu x86_64 laptop)**: `ahmad@192.168.1.69` — runs joystick driver, web dashboard, and image saving
 
 Both sides communicate via ROS2 Jazzy over CycloneDDS with unicast peer discovery (no multicast, required for Docker host networking).
+>>>>>>> 613bc57504edb5b445fd2492fa1709f1f692d8f9
 
 ---
 
@@ -17,8 +26,13 @@ Both sides communicate via ROS2 Jazzy over CycloneDDS with unicast peer discover
 |-----------|---------|
 | ROV frame | BlueROV2 HEAVY, VECTORED_6DOF configuration |
 | Flight controller | Pixhawk1 fmuv3 running ArduSub 4.5.7 |
+<<<<<<< HEAD
+| Onboard computer | Raspberry Pi 5 (ARM64, Raspberry Pi OS Lite 64-bit / Debian 13) |
+| Topside computer | AlmaLinux 10 x86_64 laptop (ROS 2 Lyrical from RoboStack via pixi) |
+=======
 | Onboard computer | Raspberry Pi 5 (ARM64, Ubuntu 24.04) |
 | Topside computer | Ubuntu 24.04 x86_64 laptop |
+>>>>>>> 613bc57504edb5b445fd2492fa1709f1f692d8f9
 | Controller | DualShock 4 (USB, read via evdev) |
 | Camera | Pi Zero 2W running libcamera HTTP server at `192.168.7.2:8080` (USB gadget ethernet on Pi 5) |
 
@@ -83,7 +97,11 @@ cd ~/rov_topside_ws
 ./stop-docker.sh     # teardown
 ```
 
+<<<<<<< HEAD
+### Option B: Native (dev machines with ROS 2 Lyrical installed, e.g. Ubuntu 26.04)
+=======
 ### Option B: Native (for development)
+>>>>>>> 613bc57504edb5b445fd2492fa1709f1f692d8f9
 
 ```bash
 # On Pi:
@@ -111,7 +129,11 @@ cd ~/rov_topside_ws
 docker build -t rov-topside .
 ```
 
+<<<<<<< HEAD
+Both images are two-stage: `ros:lyrical-ros-base` builds the workspace with colcon, and the runtime image is `ros:lyrical-ros-core` plus only the packages the nodes use. `./start-docker.sh --build` rebuilds after code changes.
+=======
 Both images are based on `ros:jazzy-ros-base` and run `colcon build --symlink-install` at build time.
+>>>>>>> 613bc57504edb5b445fd2492fa1709f1f692d8f9
 
 ---
 
@@ -156,7 +178,13 @@ Latency matters for control loops. Keeping depth hold on the Pi (close to the FC
 
 ## Onboarding Checklist
 
+<<<<<<< HEAD
+- [ ] Install AlmaLinux 10 (laptop) and the onboard OS (Pi 5 / CM5)
 - [ ] Clone both repos onto respective machines (see repo table above)
+- [ ] Run `./host-setup/setup-almalinux.sh` on the laptop and `sudo ./host-setup/setup-pi5.sh` on the Pi, then log out/in
+=======
+- [ ] Clone both repos onto respective machines (see repo table above)
+>>>>>>> 613bc57504edb5b445fd2492fa1709f1f692d8f9
 - [ ] Verify `hydromeda@192.168.1.70` and `ahmad@192.168.1.69` are reachable
 - [ ] Verify DualShock 4 appears under `/dev/input/` on laptop
 - [ ] Verify `/dev/ttyACM0` exists on Pi (Pixhawk connected)

@@ -1,0 +1,22 @@
+[0.995s] Invoking command in '/home/robosub/Downloads/rov-topside-2026-main-robostack/build/rov_dashboard': PIXI_PROMPT=(rov-topside) PYTHONPATH=/home/robosub/Downloads/rov-topside-2026-main-robostack/build/rov_dashboard/prefix_override:/home/robosub/Downloads/rov-topside-2026-main-robostack/.pixi/envs/default/lib/python3.14/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/robosub/Downloads/rov-topside-2026-main-robostack/install/rov_dashboard/lib/python3.14/site-packages:${PYTHONPATH} _=/usr/bin/env /home/robosub/Downloads/rov-topside-2026-main-robostack/.pixi/envs/default/bin/python3.14 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/robosub/Downloads/rov-topside-2026-main-robostack/build/rov_dashboard/build --no-deps symlink_data
+[1.134s] running develop
+[1.181s] running egg_info
+[1.186s] creating rov_dashboard.egg-info
+[1.186s] writing rov_dashboard.egg-info/PKG-INFO
+[1.186s] writing dependency_links to rov_dashboard.egg-info/dependency_links.txt
+[1.186s] writing entry points to rov_dashboard.egg-info/entry_points.txt
+[1.187s] writing requirements to rov_dashboard.egg-info/requires.txt
+[1.187s] writing top-level names to rov_dashboard.egg-info/top_level.txt
+[1.187s] writing manifest file 'rov_dashboard.egg-info/SOURCES.txt'
+[1.198s] reading manifest file 'rov_dashboard.egg-info/SOURCES.txt'
+[1.198s] writing manifest file 'rov_dashboard.egg-info/SOURCES.txt'
+[1.205s] running build_ext
+[1.205s] Creating /home/robosub/Downloads/rov-topside-2026-main-robostack/install/rov_dashboard/lib/python3.14/site-packages/rov-dashboard.egg-link (link to .)
+[1.206s] Installing server script to /home/robosub/Downloads/rov-topside-2026-main-robostack/install/rov_dashboard/lib/rov_dashboard
+[1.206s] 
+[1.206s] Installed /home/robosub/Downloads/rov-topside-2026-main-robostack/build/rov_dashboard
+[1.206s] running symlink_data
+[1.206s] creating /home/robosub/Downloads/rov-topside-2026-main-robostack/install/rov_dashboard/share/ament_index/resource_index/packages
+[1.206s] symbolically linking /home/robosub/Downloads/rov-topside-2026-main-robostack/build/rov_dashboard/resource/rov_dashboard -> /home/robosub/Downloads/rov-topside-2026-main-robostack/install/rov_dashboard/share/ament_index/resource_index/packages
+[1.206s] symbolically linking /home/robosub/Downloads/rov-topside-2026-main-robostack/build/rov_dashboard/package.xml -> /home/robosub/Downloads/rov-topside-2026-main-robostack/install/rov_dashboard/share/rov_dashboard
+[1.235s] Invoked command in '/home/robosub/Downloads/rov-topside-2026-main-robostack/build/rov_dashboard' returned '0': PIXI_PROMPT=(rov-topside) PYTHONPATH=/home/robosub/Downloads/rov-topside-2026-main-robostack/build/rov_dashboard/prefix_override:/home/robosub/Downloads/rov-topside-2026-main-robostack/.pixi/envs/default/lib/python3.14/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/robosub/Downloads/rov-topside-2026-main-robostack/install/rov_dashboard/lib/python3.14/site-packages:${PYTHONPATH} _=/usr/bin/env /home/robosub/Downloads/rov-topside-2026-main-robostack/.pixi/envs/default/bin/python3.14 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/robosub/Downloads/rov-topside-2026-main-robostack/build/rov_dashboard/build --no-deps symlink_data

@@ -1,0 +1,14 @@
+package.xml
+setup.cfg
+setup.py
+resource/rov_dashboard
+rov_dashboard/__init__.py
+rov_dashboard/server.py
+rov_dashboard.egg-info/PKG-INFO
+rov_dashboard.egg-info/SOURCES.txt
+rov_dashboard.egg-info/dependency_links.txt
+rov_dashboard.egg-info/entry_points.txt
+rov_dashboard.egg-info/not-zip-safe
+rov_dashboard.egg-info/requires.txt
+rov_dashboard.egg-info/top_level.txt
+rov_dashboard/static/index.html

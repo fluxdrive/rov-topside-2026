@@ -1,0 +1,2 @@
+[console_scripts]
+server = rov_dashboard.server:main

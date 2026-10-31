@@ -9,13 +9,28 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 LOG_DIR="$SCRIPT_DIR/logs"
 mkdir -p "$LOG_DIR"
 
+<<<<<<< HEAD
+# --- RoboStack: re-run this script inside the pixi environment ---
+# (skipped if already inside it, e.g. via `pixi run start`, or if pixi isn't installed)
+PIXI_BIN="$(command -v pixi 2>/dev/null || true)"
+[ -z "$PIXI_BIN" ] && [ -x "$HOME/.pixi/bin/pixi" ] && PIXI_BIN="$HOME/.pixi/bin/pixi"
+if [ -z "${PIXI_PROJECT_ROOT:-}" ] && [ -f "$SCRIPT_DIR/pixi.toml" ] && [ -n "$PIXI_BIN" ]; then
+    exec "$PIXI_BIN" run --manifest-path "$SCRIPT_DIR/pixi.toml" "$SCRIPT_DIR/start.sh" "$@"
+fi
+
+=======
+>>>>>>> 613bc57504edb5b445fd2492fa1709f1f692d8f9
 echo "=== ROV Topside (native) ==="
 
 # --- Ensure joystick devices are readable ---
 for dev in /dev/input/event*; do
     if [ -r "$dev" ] 2>/dev/null; then continue; fi
     echo "[start] Setting input device permissions..."
+<<<<<<< HEAD
+    sudo chmod 666 /dev/input/event* /dev/input/js* 2>/dev/null || echo "[start] WARNING: could not change input permissions (is the DS4 udev rule installed?)"
+=======
     sudo chmod 666 /dev/input/event* /dev/input/js* 2>/dev/null
+>>>>>>> 613bc57504edb5b445fd2492fa1709f1f692d8f9
     break
 done
 
@@ -32,7 +47,31 @@ fuser -k 8080/tcp 9090/tcp 2>/dev/null || true
 sleep 1
 
 # --- Environment ---
+<<<<<<< HEAD
+if [ -n "${PIXI_PROJECT_ROOT:-}" ]; then
+    # RoboStack/pixi: ROS 2 is already active in this environment
+    echo "[start] Using RoboStack environment ($PIXI_PROJECT_ROOT/.pixi)"
+    if [ ! -f "$SCRIPT_DIR/install/setup.bash" ]; then
+        echo "[start] Workspace not built yet; building..."
+        (cd "$SCRIPT_DIR" && colcon build --symlink-install)
+    fi
+else
+    # System ROS install (e.g. Ubuntu 26.04 debs or RHEL 10 RPMs)
+    ROS_DISTRO="${ROS_DISTRO:-lyrical}"
+    if [ ! -f "/opt/ros/$ROS_DISTRO/setup.bash" ]; then
+        echo "[start] No ROS found. Install pixi (curl -fsSL https://pixi.sh/install.sh | bash) and rerun,"
+        echo "[start] or use ./start-docker.sh."
+        exit 1
+    fi
+    if [ ! -f "$SCRIPT_DIR/install/setup.bash" ]; then
+        echo "[start] Workspace not built. Run: source /opt/ros/$ROS_DISTRO/setup.bash && colcon build --symlink-install"
+        exit 1
+    fi
+    source "/opt/ros/$ROS_DISTRO/setup.bash"
+fi
+=======
 source /opt/ros/jazzy/setup.bash
+>>>>>>> 613bc57504edb5b445fd2492fa1709f1f692d8f9
 source "$SCRIPT_DIR/install/setup.bash"
 export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 export CYCLONEDDS_URI=file://$SCRIPT_DIR/cyclonedds_topside.xml
