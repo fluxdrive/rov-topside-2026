@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CycloneDDS xmlns="https://cdds.io/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://cdds.io/config https://raw.githubusercontent.com/eclipse-cyclonedds/cyclonedds/master/etc/cyclonedds.xsd">
+  <Domain id="any">
+    <General>
+      <AllowMulticast>false</AllowMulticast>
+      <!-- Optional: pin DDS to the tether NIC so it never binds to docker0/usb0/wlan0.
+           Uncomment for deployment; Cyclone will refuse to start if this address is absent.
+      <Interfaces>
+        <NetworkInterface address="192.168.1.69"/>
+      </Interfaces>
+      -->
+    </General>
+    <Discovery>
+      <ParticipantIndex>auto</ParticipantIndex>
+      <Peers>
+        <Peer address="192.168.1.70"/>  <!-- Pi 5 onboard -->
+        <Peer address="192.168.1.69"/>  <!-- topside (self) -->
+      </Peers>
+      <MaxAutoParticipantIndex>30</MaxAutoParticipantIndex>
+    </Discovery>
+  </Domain>
+</CycloneDDS>

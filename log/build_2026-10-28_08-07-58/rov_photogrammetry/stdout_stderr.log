@@ -1,0 +1,20 @@
+running develop
+running egg_info
+creating rov_photogrammetry.egg-info
+writing rov_photogrammetry.egg-info/PKG-INFO
+writing dependency_links to rov_photogrammetry.egg-info/dependency_links.txt
+writing entry points to rov_photogrammetry.egg-info/entry_points.txt
+writing requirements to rov_photogrammetry.egg-info/requires.txt
+writing top-level names to rov_photogrammetry.egg-info/top_level.txt
+writing manifest file 'rov_photogrammetry.egg-info/SOURCES.txt'
+reading manifest file 'rov_photogrammetry.egg-info/SOURCES.txt'
+writing manifest file 'rov_photogrammetry.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/robosub/Downloads/rov-topside-2026-main-robostack/install/rov_photogrammetry/lib/python3.14/site-packages/rov-photogrammetry.egg-link (link to .)
+Installing saver script to /home/robosub/Downloads/rov-topside-2026-main-robostack/install/rov_photogrammetry/lib/rov_photogrammetry
+
+Installed /home/robosub/Downloads/rov-topside-2026-main-robostack/build/rov_photogrammetry
+running symlink_data
+creating /home/robosub/Downloads/rov-topside-2026-main-robostack/install/rov_photogrammetry/share/ament_index/resource_index/packages
+symbolically linking /home/robosub/Downloads/rov-topside-2026-main-robostack/build/rov_photogrammetry/resource/rov_photogrammetry -> /home/robosub/Downloads/rov-topside-2026-main-robostack/install/rov_photogrammetry/share/ament_index/resource_index/packages
+symbolically linking /home/robosub/Downloads/rov-topside-2026-main-robostack/build/rov_photogrammetry/package.xml -> /home/robosub/Downloads/rov-topside-2026-main-robostack/install/rov_photogrammetry/share/rov_photogrammetry

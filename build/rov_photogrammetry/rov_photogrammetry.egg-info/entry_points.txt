@@ -1,0 +1,2 @@
+[console_scripts]
+saver = rov_photogrammetry.saver:main

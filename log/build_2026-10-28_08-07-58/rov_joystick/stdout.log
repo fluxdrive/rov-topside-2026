@@ -1,0 +1,20 @@
+running develop
+running egg_info
+creating rov_joystick.egg-info
+writing rov_joystick.egg-info/PKG-INFO
+writing dependency_links to rov_joystick.egg-info/dependency_links.txt
+writing entry points to rov_joystick.egg-info/entry_points.txt
+writing requirements to rov_joystick.egg-info/requires.txt
+writing top-level names to rov_joystick.egg-info/top_level.txt
+writing manifest file 'rov_joystick.egg-info/SOURCES.txt'
+reading manifest file 'rov_joystick.egg-info/SOURCES.txt'
+writing manifest file 'rov_joystick.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/robosub/Downloads/rov-topside-2026-main-robostack/install/rov_joystick/lib/python3.14/site-packages/rov-joystick.egg-link (link to .)
+Installing joy_publisher script to /home/robosub/Downloads/rov-topside-2026-main-robostack/install/rov_joystick/lib/rov_joystick
+
+Installed /home/robosub/Downloads/rov-topside-2026-main-robostack/build/rov_joystick
+running symlink_data
+creating /home/robosub/Downloads/rov-topside-2026-main-robostack/install/rov_joystick/share/ament_index/resource_index/packages
+symbolically linking /home/robosub/Downloads/rov-topside-2026-main-robostack/build/rov_joystick/resource/rov_joystick -> /home/robosub/Downloads/rov-topside-2026-main-robostack/install/rov_joystick/share/ament_index/resource_index/packages
+symbolically linking /home/robosub/Downloads/rov-topside-2026-main-robostack/build/rov_joystick/package.xml -> /home/robosub/Downloads/rov-topside-2026-main-robostack/install/rov_joystick/share/rov_joystick

@@ -1,0 +1,22 @@
+[0.974s] Invoking command in '/home/robosub/Downloads/rov-topside-2026-main-robostack/build/rov_joystick': PIXI_PROMPT=(rov-topside) PYTHONPATH=/home/robosub/Downloads/rov-topside-2026-main-robostack/build/rov_joystick/prefix_override:/home/robosub/Downloads/rov-topside-2026-main-robostack/.pixi/envs/default/lib/python3.14/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/robosub/Downloads/rov-topside-2026-main-robostack/install/rov_joystick/lib/python3.14/site-packages:${PYTHONPATH} _=/usr/bin/env /home/robosub/Downloads/rov-topside-2026-main-robostack/.pixi/envs/default/bin/python3.14 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/robosub/Downloads/rov-topside-2026-main-robostack/build/rov_joystick/build --no-deps symlink_data
+[1.112s] running develop
+[1.160s] running egg_info
+[1.165s] creating rov_joystick.egg-info
+[1.165s] writing rov_joystick.egg-info/PKG-INFO
+[1.165s] writing dependency_links to rov_joystick.egg-info/dependency_links.txt
+[1.165s] writing entry points to rov_joystick.egg-info/entry_points.txt
+[1.166s] writing requirements to rov_joystick.egg-info/requires.txt
+[1.166s] writing top-level names to rov_joystick.egg-info/top_level.txt
+[1.166s] writing manifest file 'rov_joystick.egg-info/SOURCES.txt'
+[1.177s] reading manifest file 'rov_joystick.egg-info/SOURCES.txt'
+[1.177s] writing manifest file 'rov_joystick.egg-info/SOURCES.txt'
+[1.183s] running build_ext
+[1.183s] Creating /home/robosub/Downloads/rov-topside-2026-main-robostack/install/rov_joystick/lib/python3.14/site-packages/rov-joystick.egg-link (link to .)
+[1.183s] Installing joy_publisher script to /home/robosub/Downloads/rov-topside-2026-main-robostack/install/rov_joystick/lib/rov_joystick
+[1.184s] 
+[1.184s] Installed /home/robosub/Downloads/rov-topside-2026-main-robostack/build/rov_joystick
+[1.184s] running symlink_data
+[1.184s] creating /home/robosub/Downloads/rov-topside-2026-main-robostack/install/rov_joystick/share/ament_index/resource_index/packages
+[1.184s] symbolically linking /home/robosub/Downloads/rov-topside-2026-main-robostack/build/rov_joystick/resource/rov_joystick -> /home/robosub/Downloads/rov-topside-2026-main-robostack/install/rov_joystick/share/ament_index/resource_index/packages
+[1.184s] symbolically linking /home/robosub/Downloads/rov-topside-2026-main-robostack/build/rov_joystick/package.xml -> /home/robosub/Downloads/rov-topside-2026-main-robostack/install/rov_joystick/share/rov_joystick
+[1.210s] Invoked command in '/home/robosub/Downloads/rov-topside-2026-main-robostack/build/rov_joystick' returned '0': PIXI_PROMPT=(rov-topside) PYTHONPATH=/home/robosub/Downloads/rov-topside-2026-main-robostack/build/rov_joystick/prefix_override:/home/robosub/Downloads/rov-topside-2026-main-robostack/.pixi/envs/default/lib/python3.14/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/robosub/Downloads/rov-topside-2026-main-robostack/install/rov_joystick/lib/python3.14/site-packages:${PYTHONPATH} _=/usr/bin/env /home/robosub/Downloads/rov-topside-2026-main-robostack/.pixi/envs/default/bin/python3.14 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/robosub/Downloads/rov-topside-2026-main-robostack/build/rov_joystick/build --no-deps symlink_data

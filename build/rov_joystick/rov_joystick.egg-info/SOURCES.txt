@@ -1,0 +1,13 @@
+package.xml
+setup.cfg
+setup.py
+resource/rov_joystick
+rov_joystick/__init__.py
+rov_joystick/joy_publisher.py
+rov_joystick.egg-info/PKG-INFO
+rov_joystick.egg-info/SOURCES.txt
+rov_joystick.egg-info/dependency_links.txt
+rov_joystick.egg-info/entry_points.txt
+rov_joystick.egg-info/requires.txt
+rov_joystick.egg-info/top_level.txt
+rov_joystick.egg-info/zip-safe
