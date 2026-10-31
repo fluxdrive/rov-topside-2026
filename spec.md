@@ -1,7 +1,11 @@
 # Underwater ROV — System Specification
 
 ## Overview
+<<<<<<< HEAD
 An underwater remotely operated vehicle (ROV) controlled from a topside pilot station over a tethered network link. Uses ROS 2 Lyrical Luth (in Docker on lightweight Debian-based hosts) for inter-machine communication, ArduSub on a Pixhawk1 for flight control, and a dedicated Pi Zero photogrammetry camera.
+=======
+An underwater remotely operated vehicle (ROV) controlled from a topside pilot station over a tethered network link. Uses ROS2 Jazzy for inter-machine communication, ArduSub on a Pixhawk1 for flight control, and a dedicated Pi Zero photogrammetry camera.
+>>>>>>> 613bc57504edb5b445fd2492fa1709f1f692d8f9
 
 ## Architecture
 
@@ -11,7 +15,11 @@ DualShock 4
     ▼
 ┌───────────────────────────┐     Ethernet Tether     ┌────────────────────────────┐
 │   Topside Computer        │◄───────────────────────► │   Pi 5 (Onboard)           │
+<<<<<<< HEAD
 │   Debian 13 + Docker      │   Cyclone DDS (unicast)  │   RPi OS Lite 64 + Docker  │
+=======
+│   Ubuntu 24.04            │   Cyclone DDS (unicast)  │   Ubuntu 24.04 (aarch64)   │
+>>>>>>> 613bc57504edb5b445fd2492fa1709f1f692d8f9
 │                           │                          │                            │
 │ joy_publisher (evdev→ROS) │──── /joy ───────────────►│ joy_to_mavlink             │
 │ dashboard (tkinter GUI)   │◄── /mavros/* ────────────│   ├─ MANUAL_CONTROL → FC   │
@@ -136,7 +144,10 @@ bash /tmp/rov_diag.sh          # check data flow diagnostics
 
 ## Status
 - [x] ROS2 Jazzy on topside + Pi 5
+<<<<<<< HEAD
 - [ ] ROS 2 Lyrical in Docker on Debian 13 (topside) + Raspberry Pi OS Lite (Pi 5), needs bench test
+=======
+>>>>>>> 613bc57504edb5b445fd2492fa1709f1f692d8f9
 - [x] Cyclone DDS unicast cross-machine discovery
 - [x] Photogrammetry pipeline (Pi Zero → Pi 5 → topside)
 - [x] Custom DS4 joystick publisher (evdev)

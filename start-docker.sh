@@ -1,7 +1,11 @@
 #!/bin/bash
 # ROV Topside — start all services in Docker
+<<<<<<< HEAD
 # Usage: ./start-docker.sh           (builds image on first run)
 #        ./start-docker.sh --build   (rebuild after code changes)
+=======
+# Usage: ./start-docker.sh
+>>>>>>> 613bc57504edb5b445fd2492fa1709f1f692d8f9
 
 set -e
 
@@ -26,7 +30,11 @@ fuser -k 8080/tcp 9090/tcp 2>/dev/null || true
 sleep 1
 
 # Start containers
+<<<<<<< HEAD
 docker compose up -d "$@"
+=======
+docker compose up -d
+>>>>>>> 613bc57504edb5b445fd2492fa1709f1f692d8f9
 sleep 3
 
 # Verify

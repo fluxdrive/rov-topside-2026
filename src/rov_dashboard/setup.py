@@ -19,7 +19,11 @@ setup(
     maintainer_email='mahkgamer@gmail.com',
     description='Web-based dashboard server (HTTP + WebSocket) for ROV topside',
     license='MIT',
+<<<<<<< HEAD
     extras_require={'test': ['pytest']},
+=======
+    tests_require=['pytest'],
+>>>>>>> 613bc57504edb5b445fd2492fa1709f1f692d8f9
     entry_points={
         'console_scripts': [
             'server = rov_dashboard.server:main',

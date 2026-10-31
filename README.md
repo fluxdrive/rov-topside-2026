@@ -1,25 +1,38 @@
 # ROV Topside
 
+<<<<<<< HEAD
 Pilot station software for the underwater ROV. Runs on the topside laptop (AlmaLinux 10, ROS 2 Lyrical Luth from RoboStack via pixi) connected to the ROV via Ethernet tether.
+=======
+Pilot station software for the underwater ROV. Runs on the topside Ubuntu laptop connected to the ROV via Ethernet tether.
+>>>>>>> 613bc57504edb5b445fd2492fa1709f1f692d8f9
 
 ## Hardware
 
 | Component | Details |
 |-----------|---------|
+<<<<<<< HEAD
 | Computer | AlmaLinux 10 x86_64 (`192.168.1.69`), alternative: Debian 13 + Docker |
 | ROS | ROS 2 Lyrical Luth from RoboStack (pixi), or Docker on Debian |
+=======
+| Computer | Ubuntu 24.04 desktop (`192.168.1.69`) |
+>>>>>>> 613bc57504edb5b445fd2492fa1709f1f692d8f9
 | Controller | DualShock 4 (USB or Bluetooth) |
 | Tether | Ethernet to Pi 5 at `192.168.1.70` |
 
 ## Quick Start
 
+<<<<<<< HEAD
 ### Recommended: RoboStack (pixi) on AlmaLinux 10
 
 ROS 2 Lyrical comes from [RoboStack](https://robostack.github.io) through [pixi](https://pixi.sh), pinned in `pixi.toml` / `pixi.lock`. Nothing ROS-related is installed system-wide, and the same setup works on any x86_64 Linux.
+=======
+### Native (recommended for development)
+>>>>>>> 613bc57504edb5b445fd2492fa1709f1f692d8f9
 
 ```bash
 git clone git@github.com:aikios/rov-topside.git ~/rov_topside_ws
 cd ~/rov_topside_ws
+<<<<<<< HEAD
 ./host-setup/setup-almalinux.sh             # run as your user, not sudo
 ./host-setup/setup-almalinux.sh --network   # optional: static 192.168.1.69 on the tether NIC
 ```
@@ -81,6 +94,9 @@ docker compose exec web_dashboard ros2 topic list
 ```bash
 cd ~/rov_topside_ws
 source /opt/ros/lyrical/setup.bash
+=======
+source /opt/ros/jazzy/setup.bash
+>>>>>>> 613bc57504edb5b445fd2492fa1709f1f692d8f9
 colcon build --symlink-install
 source install/setup.bash
 
@@ -92,7 +108,18 @@ export CYCLONEDDS_URI=file://$HOME/rov_topside_ws/cyclonedds_topside.xml
 ./stop.sh           # stop everything
 ```
 
+<<<<<<< HEAD
 `start.sh` exits with a message if `/opt/ros/lyrical` is missing. Override with `ROS_DISTRO=<distro> ./start.sh`.
+=======
+Open dashboard: **http://localhost:8080**
+
+### Docker
+
+```bash
+./start-docker.sh   # builds image if needed, starts all containers
+./stop-docker.sh    # stops and removes containers
+```
+>>>>>>> 613bc57504edb5b445fd2492fa1709f1f692d8f9
 
 ## ROS2 Packages
 
@@ -154,9 +181,13 @@ CycloneDDS with unicast peer discovery (no multicast). Edit `cyclonedds_topside.
 <Peer address="192.168.1.69"/>  <!-- this machine (self) -->
 ```
 
+<<<<<<< HEAD
 All containers use `network_mode: host`. `RMW_IMPLEMENTATION=rmw_cyclonedds_cpp` is set in start scripts and Dockerfile (Lyrical's default is still Fast DDS).
 
 If the laptop's Wi-Fi or `docker0` confuses discovery, uncomment the `<Interfaces>` block in `cyclonedds_topside.xml` to pin DDS to the tether address.
+=======
+All containers use `network_mode: host`. `RMW_IMPLEMENTATION=rmw_cyclonedds_cpp` is set in start scripts and Dockerfile.
+>>>>>>> 613bc57504edb5b445fd2492fa1709f1f692d8f9
 
 ## Captures
 
@@ -164,6 +195,7 @@ Photogrammetry images are saved to `./captures/` (relative to the workspace root
 
 ## Dependencies
 
+<<<<<<< HEAD
 RoboStack environment (`pixi.toml`): `ros-lyrical-ros-base`, `ros-lyrical-rmw-cyclonedds-cpp`, `ros-lyrical-mavros-msgs`, `ros-lyrical-std-srvs`, `websockets`, `colcon-common-extensions`, `setuptools>=68,<80`, and `evdev-binary` from PyPI.
 
 Debian (installed by `host-setup/setup-debian.sh`): Docker Engine + Compose plugin.
@@ -173,6 +205,14 @@ Container (installed by the Dockerfile, ROS 2 Lyrical):
 - `ros-lyrical-rmw-cyclonedds-cpp`
 - `ros-lyrical-mavros-msgs`, `ros-lyrical-std-srvs`
 - `python3-evdev`, `python3-websockets` (apt, nothing compiled)
+=======
+Installed by Dockerfile / native prerequisites:
+
+- `ros-jazzy-rmw-cyclonedds-cpp`
+- `ros-jazzy-mavros-msgs`
+- `ros-jazzy-image-transport`, `ros-jazzy-compressed-image-transport`
+- `python3-evdev`, `python3-websockets`
+>>>>>>> 613bc57504edb5b445fd2492fa1709f1f692d8f9
 
 ## Related Repo
 
